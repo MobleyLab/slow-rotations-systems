@@ -1,0 +1,3 @@
+[ dihedral_restraints ]
+; ai   aj    ak    al  type  phi  dphi  fc
+204   21   22   24     1    -64     0  0.001

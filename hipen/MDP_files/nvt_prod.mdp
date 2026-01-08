@@ -1,0 +1,34 @@
+title                    = NVT equilibration
+integrator               = sd
+dt                       = 0.002 ; Time step (ps)
+nsteps                   = 200000 ; 
+
+;Output
+nstxout                  = 200 ; Save coords every 1000 steps
+nstvout                  = 200 ; Save velocity every 1000 steps
+nstenergy                = 200 ; Save energies every 1000 steps
+nstlog                   = 200 ; Print log every 1000 steps
+nstxout-compressed       = 200
+
+compressed-x-precision   = 1000
+continuation             = no
+constraint_algorithm     = lincs
+constraints              = all-bonds
+lincs_order              = 4
+lincs_iter               = 1
+cutoff-scheme            = verlet
+ns_type                  = grid
+coulombtype              = PME
+rcoulomb                 = 1.0
+vdwtype                  = cutoff
+rvdw                     = 1.0
+DispCorr                 = no
+tcoupl                   = v-rescale
+tc-grps                  = system
+tau_t                    = 0.1
+ref_t                    = 298.15
+pcoupl                   = no
+gen_vel                  = yes
+gen_temp                 = 298.15
+gen_seed                 = -1
+
